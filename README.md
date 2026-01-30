@@ -60,3 +60,65 @@ For example, if you’re creating a program to manage vehicles, you might define
 
 An object is an instance of a class. It’s a specific realization of the class, with its own unique data. For example, if Vehicle is a class, then my_car and your_car could be objects (instances) of that class, each with its own color, speed, and model. 
    
+     #class
+     class Car:
+    def __init__(self,color,speed,interior):
+        self.color=color  # u1-red - u2-white -u3-black
+        self.speed=speed
+        self.interior=interior
+
+
+    def accelerate(self):
+     self.speed += 10
+     print(f"accelerating new speed {self.speed} km/h")
+
+    def brake (self):
+     self.speed -= 10
+     print(f"accelerating new speed {self.speed} km/h)
+
+
+    "object"
+    my_car = Car("red",10,"white")
+    print(my_car)
+
+
+    car2 = Car("orange",12,"beige")
+    print(car2)
+
+
+    car2.accelerate()
+
+##  **What is a Constructor?**
+
+A constructor is a special method that is automatically called when an object of a class is created. It’s used to initialize the object’s attributes or perform any setup required for the object.
+
+## **The __init__ Method**
+
+The __init__ method is the most commonly used constructor in Python. It’s called whenever a new instance of a class is created. You can define this method to initialize the object’s attributes or perform other setup tasks.
+
+In Python, the constructor method is named __init__
+
+## **The __del__ Method (Destructor)**
+
+A destructor is a special method that is called when an object is about to be destroyed. In Python, the destructor method is named __del__. It’s used to perform cleanup tasks, such as releasing resources or closing files.
+
+Syntax:
+
+
+    class Car:
+        # Parameterized constructor
+          def __init__(self, brand, model):
+             self.brand = brand
+             self.model = model
+
+    # Destructor
+    def __del__(self):
+        print(f"The {self.brand} {self.model} has been destroyed.")
+
+
+    # Create an object of the Car class
+    my_car = Car("Toyota", "Corolla")
+    # Explicitly delete the object (triggers the destructor)
+    del my_car  # Output: The Toyota Corolla has been destroyed.
+     
+    The Toyota Corolla has been destroyed.
