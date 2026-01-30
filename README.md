@@ -87,6 +87,31 @@ An object is an instance of a class. It’s a specific realization of the class,
 
 
     car2.accelerate()
+    
+
+## **Explanation of the Code**
+
+Class Definition: The Vehicle class is defined with the class keyword. It has a constructor (init), two methods (accelerate and brake), and a method to display details (display).
+
+Attributes: The color and speed attributes are initialized in the constructor using the self keyword.
+
+Methods: The accelerate and brake methods modify the speed attribute, while the display method prints the current state of the object.
+
+Object Creation: An object my_car is created from the Vehicle class with the color "Red" and speed 60.
+
+Accessing Attributes and Methods: Attributes are accessed using dot notation (my_car.color), and methods are called using parentheses (my_car.accelerate(20)).
+
+
+
+## **Defining Attributes and Methods**
+
+Attributes are variables that belong to an object. They represent the object’s state or properties.
+Methods are functions that belong to an object. They define the object’s behavior.
+For example, in a Vehicle class, color and speed could be attributes, and accelerate() and brake() could be methods
+
+## **The self Keyword**
+
+The self keyword refers to the current instance of the class. It’s used to access attributes and methods of the object within the class. It’s always the first parameter of any method in a class.
 
 ##  **What is a Constructor?**
 
@@ -120,5 +145,17 @@ Syntax:
     my_car = Car("Toyota", "Corolla")
     # Explicitly delete the object (triggers the destructor)
     del my_car  # Output: The Toyota Corolla has been destroyed.
+    
+**Key Takeaways**
+
+1. A class is a blueprint for creating objects.
+
+2. An object is an instance of a class.
+
+3. Attributes define the state of an object, and methods define its behavior.
+
+4. The self keyword is used to refer to the current instance of the class.
+
+5. Objects are created by calling the class name like a function.
      
-    The Toyota Corolla has been destroyed.
+
